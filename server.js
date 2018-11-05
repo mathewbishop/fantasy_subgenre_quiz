@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/", viewRoutes);
-app.use("/api/friends", apiRoutes);
+app.use("/", apiRoutes);
 //=====================================================
 // Listener
 //=====================================================

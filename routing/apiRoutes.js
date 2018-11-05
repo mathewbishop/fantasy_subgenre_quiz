@@ -7,7 +7,9 @@ router.get("/api/friends", (req, res) => {
 });
 
 router.post("/api/friends", (req, res) => {
-    // incoming survey posts and compatibility logic
+    let newSurvey = req.body;
+    console.log(newSurvey);
+    res.end();
 });
 
 
