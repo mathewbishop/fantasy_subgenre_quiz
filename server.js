@@ -1,8 +1,9 @@
 //=====================================================
-// Require Packages
+// Require Modules
 //=====================================================
 const express = require("express");
 const path = require("path");
+const viewRoutes = require("./routing/viewRoutes");
 
 //=====================================================
 // Global Vars
@@ -15,9 +16,7 @@ const PORT = process.env.PORT || 3000;
 //=====================================================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
-
+app.use("/", viewRoutes);
 //=====================================================
 // Listener
 //=====================================================
