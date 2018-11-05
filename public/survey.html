@@ -152,9 +152,23 @@
 $('#submit-survey').click((event) => {
     event.preventDefault();
 
-//Form Validation Var
-let isFormValid = true;
-        // Survey answers    
+    
+    let validateForm = () => {
+        let isValid = true;
+        $(".form-control").each(() => {
+            if ($(".form-control").val() === "") {
+                isValid = false;
+            }
+        });
+        $(".question").each(() => {
+            if ($(".question").val() === "Please Select an Option") {
+                isValid = false;
+            }
+        })
+        return isValid;
+    }
+
+    if (validateForm()) {
         let surveyAnswers = {
             name: $("#name").val().trim(),
             photo: $("#pic").val().trim(),
@@ -171,23 +185,12 @@ let isFormValid = true;
                 parseInt($("#q10").val())
             ]
         }
-
-        surveyAnswers.score.forEach(answer => {
-            if (answer === "Please Select an Option") {
-                isFormValid = false;
-            }
-        });
-
-        if ((surveyAnswers.name === "") || (surveyAnswers.photo === "")) {
-            isFormValid = false;
-        }
-
-        if (isFormValid === true) {
-            $.post("/api/friends", surveyAnswers);
-        }
-    
-    console.log(surveyAnswers);
-    alert("Please answer all survey questions.")
+        console.log(surveyAnswers);
+    }
+    else {
+        alert("Please complete form before submitting.");
+    }
+        
 })
 
 
