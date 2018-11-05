@@ -8,11 +8,10 @@ router.get("/api/friends", (req, res) => {
 
 router.post("/api/friends", (req, res) => {
     let newSurvey = req.body;
+
     console.log(newSurvey);
     res.end();
 });
-
-
 
 
 module.exports = router
