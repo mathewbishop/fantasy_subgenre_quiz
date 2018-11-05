@@ -182,11 +182,12 @@ let isFormValid = true;
             isFormValid = false;
         }
 
-        if (isFormValid === false) {
-            alert("Please answer all survey questions.")
+        if (isFormValid === true) {
+            $.post("/api/friends", surveyAnswers);
         }
     
     console.log(surveyAnswers);
+    alert("Please answer all survey questions.")
 })
 
 
