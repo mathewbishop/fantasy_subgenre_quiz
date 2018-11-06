@@ -207,10 +207,14 @@ $('#submit-survey').click((event) => {
                 parseInt($("#q10").val())
             ]
         }
-        console.log(surveyAnswers);
-        $.post("/api/friends", surveyAnswers, data => {
+        // console.log(surveyAnswers);
+        $.post("/api/friends", surveyAnswers)
+        .then(res => {
+            let data = res;
+            console.log(data);
             
-        })
+        }); 
+        
     }
     else {
         alert("Please complete form before submitting.");

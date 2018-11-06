@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path");
-const fs = require("fs");
 const database = require("../app/data/friends");
 
 router.get("/api/friends", (req, res) => {
@@ -28,11 +26,7 @@ router.post("/api/friends", (req, res) => {
             console.log(diff);
             
         }
-        
-        
-        
-        
-        res.end();
+        res.json(matchName);
 });
 
 
