@@ -1,27 +1,6 @@
 //=====================================================
 // Data objects for matching
 //=====================================================
-const _ = require("lodash");
-// Need to compare surveyAnswers.score with all objects[i].score
-// Find closest match (least difference) and return the objects[i].name and objects[i].photo
-
-
-let surveyAnswers = {
-    name: "matt",
-    photo: "test",
-    score: [
-        2,
-        1,
-        3,
-        1,
-        2,
-        5,
-        3,
-        2,
-        1,
-        3
-    ]
-}
 
 const objects = [
  {
@@ -59,13 +38,5 @@ const objects = [
 }
 ]
 
-let userScore = surveyAnswers.score;
 
-for (let i = 0; i < objects.length; i++) {
-    let diff = 0;
-    for (let j = 0; j < userScore.length; j++) {
-        diff += Math.abs(objects[i].score[j] - userScore[j]);
-    }
-    console.log(diff);
-}
 
