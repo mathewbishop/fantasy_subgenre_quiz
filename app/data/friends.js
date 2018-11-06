@@ -35,6 +35,23 @@ const objects = [
         2
     ]
 
+},
+{
+    name: "Test-3",
+    photo: "Test-pic-3",
+    score: [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+    ]
+
 }
 ]
 
