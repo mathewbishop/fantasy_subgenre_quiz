@@ -5,25 +5,23 @@ const _ = require("lodash");
 // Need to compare surveyAnswers.score with all objects[i].score
 // Find closest match (least difference) and return the objects[i].name and objects[i].photo
 
-// Iterate over each array and get diff of each value
-// 
 
-// let surveyAnswers = {
-//     name: $("#name").val().trim(),
-//     photo: $("#pic").val().trim(),
-//     score: [
-//         parseInt($("#q1").val()),
-//         parseInt($("#q2").val()),
-//         parseInt($("#q3").val()),
-//         parseInt($("#q4").val()),
-//         parseInt($("#q5").val()),
-//         parseInt($("#q6").val()),
-//         parseInt($("#q7").val()),
-//         parseInt($("#q8").val()),
-//         parseInt($("#q9").val()),
-//         parseInt($("#q10").val())
-//     ]
-// }
+let surveyAnswers = {
+    name: "matt",
+    photo: "test",
+    score: [
+        2,
+        1,
+        3,
+        1,
+        2,
+        5,
+        3,
+        2,
+        1,
+        3
+    ]
+}
 
 const objects = [
  {
@@ -55,23 +53,19 @@ const objects = [
         1,
         1,
         1,
-        1
+        2
     ]
 
 }
 ]
 
-// function compare(arry1, arry2) {
-//     for (let i = 0; i < arry1.length; i++) {
-//         let result = []
-//         result.push(arry1[i] - arry2[i]);
-//         return result;
-//     }
-// }
+let userScore = surveyAnswers.score;
 
-// console.log(compare(objects[0].score, objects[1].score));
+for (let i = 0; i < objects.length; i++) {
+    let diff = 0;
+    for (let j = 0; j < userScore.length; j++) {
+        diff += Math.abs(objects[i].score[j] - userScore[j]);
+    }
+    console.log(diff);
+}
 
-let x = objects[1].score.map((item, index) => {
-    return Math.abs(item - objects[0].score[index]);
-})
-console.log(x);
