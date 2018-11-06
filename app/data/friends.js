@@ -38,5 +38,7 @@ const objects = [
 }
 ]
 
-
+module.exports = {
+    objects: objects  
+} 
 
