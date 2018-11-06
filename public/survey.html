@@ -211,8 +211,7 @@ $('#submit-survey').click((event) => {
         $.post("/api/friends", surveyAnswers)
         .then(res => {
             let data = res;
-            console.log(data);
-            
+            console.log(data); 
         }); 
         
     }

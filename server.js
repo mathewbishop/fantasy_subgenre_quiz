@@ -1,18 +1,14 @@
 //=====================================================
-// Require Modules
+// Modules
 //=====================================================
 const express = require("express");
-const path = require("path");
 const viewRoutes = require("./routing/viewRoutes");
 const apiRoutes = require("./routing/apiRoutes");
-
-
 //=====================================================
 // Global Vars
 //=====================================================
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 //=====================================================
 // Middleware
 //=====================================================
