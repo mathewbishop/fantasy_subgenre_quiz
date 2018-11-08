@@ -2,7 +2,6 @@
 // Modules
 //=====================================================
 const express = require("express");
-const viewRoutes = require("./routing/viewRoutes");
 const apiRoutes = require("./routing/apiRoutes");
 //=====================================================
 // Global Vars
@@ -14,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 //=====================================================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(viewRoutes);
+app.use(express.static("public", { index: "home.html" })); // Serve the Public directory
 app.use(apiRoutes);
 //=====================================================
 // Listener

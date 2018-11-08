@@ -37,13 +37,22 @@ $('#submit-survey').click((event) => {
         // console.log(surveyAnswers);
         $.post("/api/friends", surveyAnswers)
         .then(res => {
-            let data = res;
-            console.log(data); 
+            console.log(res);
+            
+            let matchName = res.name;
+            let matchPic = res.photo;
+            $("#match-name").html(matchName);
+            $("#match-pic").attr("src", matchPic);
+            $("#match-modal").show();
         }); 
         
     }
     else {
         alert("Please complete form before submitting.");
     }
-        
+
+})
+
+$("#close-modal").click(() => {
+    $("#match-modal").hide();
 })
