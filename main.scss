@@ -1,7 +1,10 @@
 div#match-modal {
-    display: none;
+    display: block;
+    width: 60%;
     z-index: 1;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 10%;
+    left: 20%;
+    div.modal-content { padding: 2rem; }
+    img#match-pic { max-width: 300px; }
 }

@@ -39,11 +39,13 @@ $('#submit-survey').click((event) => {
         .then(res => {
             console.log(res);
             
-            let matchName = res.name;
-            let matchPic = res.photo;
+            let matchName = res.matchName;
+            let matchPic = res.matchPic;
             $("#match-name").html(matchName);
             $("#match-pic").attr("src", matchPic);
             $("#match-modal").show();
+            console.log(matchName);
+            
         }); 
         
     }
