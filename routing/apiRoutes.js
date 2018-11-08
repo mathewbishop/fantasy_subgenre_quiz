@@ -14,34 +14,37 @@ router.post("/api/friends", (req, res) => {
     // Declare vars for the incoming data, and eventual match
     let newSurvey = req.body;
     let userScore = newSurvey.score;
-    let matchName;
-    let matchPic;
-
+    
+    // An object we will use to find the best match. It will be updated as the for-loop runs
+    let bestMatch = {
+        name: "",
+        photo: "",
+        score: 1000
+    }
         // First for loop; Here we are looping over the 'database' of existing objects
         for (let i = 0; i < database.objects.length; i++) {
 
-            // Declare vars to keep track of differences. 'diff' is for the difference between each arry. 'totalDiff is a value used to compare against in order to find the arry with the least difference in value
-            let diff = 0;
-            let totalDiff = 1000;
+            
+            // Will track the total difference in absolute value between the user's score and the objects' scores
+            let totalDiff = 0;
 
-            // Second, nested for loop; This loops over the score arrys and performs gets the absolute value difference for each index of each arry in the database
+            // A nested for-loop that compares the the user's score and the scores of the objects (in absolute value)
                 for (let j = 0; j < userScore.length; j++) {
-                    diff += Math.abs(database.objects[i].score[j] - userScore[j]);
+                    totalDiff += Math.abs(database.objects[i].score[j] - userScore[j]);
                 }
             
-            // This if statement finds the arry in the database with the least difference in value compared to the user's scores
-            if (diff < totalDiff) {
-                totalDiff = diff;
-                matchName = database.objects[i].name;
-                matchPic = database.objects[i].photo;
-                console.log(matchName);
+            // This if statement will update the bestMatch object to the object from the database that has the least difference in score with the user
+            if (totalDiff <= bestMatch.score) {
+                bestMatch.name = database.objects[i].name;
+                bestMatch.photo = database.objects[i].photo;
+                bestMatch.score = totalDiff;
             }
 
-            console.log(diff);
+            
         }
 
         // Send back the match
-        res.json({ matchName: matchName, matchPic: matchPic });
+        res.json({ bestMatch });
 });
 
 

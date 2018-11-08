@@ -39,8 +39,8 @@ $('#submit-survey').click((event) => {
         .then(res => {
             console.log(res);
             
-            let matchName = res.matchName;
-            let matchPic = res.matchPic;
+            let matchName = res.bestMatch.name;
+            let matchPic = res.bestMatch.photo;
             $("#match-name").html(matchName);
             $("#match-pic").attr("src", matchPic);
             $("#match-modal").show();
