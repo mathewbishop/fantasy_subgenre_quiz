@@ -1,3 +1,11 @@
+//=====================================================
+// Variables
+//=====================================================
+$color-primary: #779CAB;
+$color-accent: #32DE8A;
+//=====================================================
+// Modal styles
+//=====================================================
 div#match-modal {
     display: none;
     width: 60%;
@@ -5,6 +13,33 @@ div#match-modal {
     position: fixed;
     top: 10%;
     left: 20%;
+    max-height: 40vh;
     div.modal-content { padding: 2rem; }
     img#match-pic { max-width: 300px; }
+}
+
+//=====================================================
+// Survey Page
+//=====================================================
+.survey {
+    background-color: $color-primary;
+    .btn { background-color: $color-accent; }
+    h1.title { margin: 2rem 1rem 2rem 0; display: inline-block; }
+}
+.form-group {
+    margin: 3rem 0; 
+    p { font-size: 1.5rem; }
+    label { font-size: 1.2rem; margin-top: 1rem; }
+}
+
+//=====================================================
+// Home Page
+//=====================================================
+.home {
+    h1.title { font-size: 4rem; color: white; text-align: center; margin: 2rem 0; }
+    header.jumbotron { 
+        a.btn { width: 10rem; background-color: $color-accent; color: black; border: none; }
+        p { font-size: 2rem; color: white; }
+        background-color: $color-primary; text-align: center; margin: 2rem 0; 
+    }
 }

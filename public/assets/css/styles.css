@@ -4,10 +4,45 @@ div#match-modal {
   z-index: 1;
   position: fixed;
   top: 10%;
-  left: 20%; }
+  left: 20%;
+  max-height: 40vh; }
   div#match-modal div.modal-content {
     padding: 2rem; }
   div#match-modal img#match-pic {
     max-width: 300px; }
+
+.survey {
+  background-color: #779CAB; }
+  .survey .btn {
+    background-color: #32DE8A; }
+  .survey h1.title {
+    margin: 2rem 1rem 2rem 0;
+    display: inline-block; }
+
+.form-group {
+  margin: 3rem 0; }
+  .form-group p {
+    font-size: 1.5rem; }
+  .form-group label {
+    font-size: 1.2rem;
+    margin-top: 1rem; }
+
+.home h1.title {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  margin: 2rem 0; }
+.home header.jumbotron {
+  background-color: #779CAB;
+  text-align: center;
+  margin: 2rem 0; }
+  .home header.jumbotron a.btn {
+    width: 10rem;
+    background-color: #32DE8A;
+    color: black;
+    border: none; }
+  .home header.jumbotron p {
+    font-size: 2rem;
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */

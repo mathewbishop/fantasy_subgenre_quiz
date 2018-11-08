@@ -37,15 +37,12 @@ $('#submit-survey').click((event) => {
         // console.log(surveyAnswers);
         $.post("/api/friends", surveyAnswers)
         .then(res => {
-            console.log(res);
-            
             let matchName = res.bestMatch.name;
             let matchPic = res.bestMatch.photo;
             $("#match-name").html(matchName);
             $("#match-pic").attr("src", matchPic);
             $("#match-modal").show();
             console.log(matchName);
-            
         }); 
         
     }
