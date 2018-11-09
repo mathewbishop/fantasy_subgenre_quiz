@@ -42,7 +42,8 @@ div#match-modal {
 .home {
     .title { font-size: 4rem; font-family: $font-display; color: $color-black; text-align: left; margin: 2rem 0 2rem 2rem; }
     main { 
-        a.btn { width: 10rem; background-color: $color-accent; color: $color-neutral; border: none; border-radius: 2px; }
+        a.btn { width: auto; background-color: $color-accent; color: $color-neutral; border: none; border-radius: 2px; text-transform: uppercase; box-shadow: 0 4px 2px $color-black; animation: home__btn--fade; animation-duration: 5s; }
+        a.btn span { font-size: .75rem; display: block; text-transform: none; }
         p { font-size: 2rem; color: $color-black; }
         text-align: left; margin: 2rem 0 4rem 2rem; 
     }
@@ -57,7 +58,7 @@ div#match-modal {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        opacity: .4;
+        opacity: .5;
         z-index: -1;
     }
     footer { 
@@ -76,3 +77,4 @@ div#match-modal {
 
 
 
+@import "animations";
