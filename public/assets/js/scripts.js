@@ -42,7 +42,6 @@ $('#submit-survey').click((event) => {
             $("#match-name").html(matchName);
             $("#match-pic").attr("src", matchPic);
             $("#match-modal").show();
-            console.log(matchName);
         }); 
         
     }
