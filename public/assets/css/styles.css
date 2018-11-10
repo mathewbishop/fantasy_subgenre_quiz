@@ -18,7 +18,7 @@
     margin-top: 1rem; }
 
 div#match-modal {
-  display: block;
+  display: none;
   width: 60%;
   z-index: 1;
   position: fixed;
@@ -30,6 +30,7 @@ div#match-modal {
     padding: 2rem; }
   div#match-modal img#match-pic {
     max-width: 50%;
+    max-height: 20vh;
     margin: 1rem auto; }
   div#match-modal #close-modal {
     width: auto;
