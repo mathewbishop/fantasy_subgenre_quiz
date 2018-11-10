@@ -1,20 +1,10 @@
-div#match-modal {
-  display: none;
-  width: 60%;
-  z-index: 1;
-  position: fixed;
-  top: 10%;
-  left: 20%;
-  max-height: 40vh; }
-  div#match-modal div.modal-content {
-    padding: 2rem; }
-  div#match-modal img#match-pic {
-    max-width: 300px; }
-
 .survey {
-  background-color: #252627; }
+  background-color: #D3D4D9; }
   .survey .btn {
-    background-color: #4B3F72; }
+    background-color: #4B3F72;
+    color: #D3D4D9;
+    border: none;
+    border-radius: 2px; }
   .survey h1.title {
     margin: 2rem 1rem 2rem 0;
     display: inline-block; }
@@ -27,6 +17,25 @@ div#match-modal {
     font-size: 1.2rem;
     margin-top: 1rem; }
 
+div#match-modal {
+  display: none;
+  width: 60%;
+  z-index: 1;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  max-height: 40vh;
+  text-align: center; }
+  div#match-modal div.modal-content {
+    padding: 2rem; }
+  div#match-modal img#match-pic {
+    max-width: 35%; }
+
+@keyframes home__btn--fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .home .title {
   font-size: 4rem;
   font-family: "MedievalSharp", cursive;
@@ -77,11 +86,5 @@ div#match-modal {
     color: #252627; }
     .home footer a:hover {
       color: #4B3F72; }
-
-@keyframes home__btn--fade {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
 
 /*# sourceMappingURL=styles.css.map */

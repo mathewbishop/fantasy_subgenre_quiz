@@ -8,6 +8,20 @@ $color-neutral: #D3D4D9;
 
 $font-display: 'MedievalSharp', cursive;
 //=====================================================
+// Survey Page
+//=====================================================
+.survey {
+    background-color: $color-neutral;
+    .btn { background-color: $color-accent; color: $color-neutral; border: none; border-radius: 2px; }
+    h1.title { margin: 2rem 1rem 2rem 0; display: inline-block; }
+}
+.form-group {
+    margin: 3rem 0; 
+    p { font-size: 1.5rem; }
+    label { font-size: 1.2rem; margin-top: 1rem; }
+}
+
+//=====================================================
 // Modal styles
 //=====================================================
 div#match-modal {
@@ -18,63 +32,13 @@ div#match-modal {
     top: 10%;
     left: 20%;
     max-height: 40vh;
+    text-align: center;
     div.modal-content { padding: 2rem; }
-    img#match-pic { max-width: 300px; }
-}
-
-//=====================================================
-// Survey Page
-//=====================================================
-.survey {
-    background-color: $color-black;
-    .btn { background-color: $color-accent; }
-    h1.title { margin: 2rem 1rem 2rem 0; display: inline-block; }
-}
-.form-group {
-    margin: 3rem 0; 
-    p { font-size: 1.5rem; }
-    label { font-size: 1.2rem; margin-top: 1rem; }
-}
-
-//=====================================================
-// Home Page
-//=====================================================
-.home {
-    .title { font-size: 4rem; font-family: $font-display; color: $color-black; text-align: left; margin: 2rem 0 2rem 2rem; }
-    main { 
-        a.btn { width: auto; background-color: $color-accent; color: $color-neutral; border: none; border-radius: 2px; text-transform: uppercase; box-shadow: 0 4px 2px $color-black; animation: home__btn--fade; animation-duration: 5s; }
-        a.btn span { font-size: .75rem; display: block; text-transform: none; }
-        p { font-size: 2rem; color: $color-black; }
-        text-align: left; margin: 2rem 0 4rem 2rem; 
-    }
-    main::before { 
-        content: ""; // ::before and ::after both require content
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../images/home-background.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        opacity: .5;
-        z-index: -1;
-    }
-    footer { 
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 10vh;
-        a { 
-            color: $color-black; 
-            &:hover { color: $color-accent; }
-        } 
-    }
+    img#match-pic { max-width: 35%; }
 }
 
 
 
-@import "animations";
+@import "animations",
+        "home"
+;

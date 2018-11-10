@@ -1,0 +1,38 @@
+//=====================================================
+// Home Page
+//=====================================================
+.home {
+    .title { font-size: 4rem; font-family: $font-display; color: $color-black; text-align: left; margin: 2rem 0 2rem 2rem; }
+    main { 
+        a.btn { width: auto; background-color: $color-accent; color: $color-neutral; border: none; border-radius: 2px; text-transform: uppercase; box-shadow: 0 4px 2px $color-black; animation: home__btn--fade; animation-duration: 5s; }
+        a.btn span { font-size: .75rem; display: block; text-transform: none; }
+        p { font-size: 2rem; color: $color-black; }
+        text-align: left; margin: 2rem 0 4rem 2rem; 
+    }
+    main::before { 
+        content: ""; // ::before and ::after both require content
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/home-background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: .5;
+        z-index: -1;
+    }
+    footer { 
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 10vh;
+        a { 
+            color: $color-black; 
+            &:hover { color: $color-accent; }
+        } 
+    }
+}
