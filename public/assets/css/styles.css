@@ -22,16 +22,22 @@ div#match-modal {
   width: 60%;
   z-index: 1;
   position: fixed;
-  top: 10%;
+  top: 5%;
   left: 20%;
   max-height: 40vh;
-  text-align: center; }
-  div#match-modal div.modal-content {
+  text-align: center;
+  background-color: white; }
+  div#match-modal .modal-content {
     padding: 2rem; }
-  div#match-modal img#match-pic {
+  div#match-modal #match-name {
+    font-size: 1.5rem;
+    font-weight: bold; }
+  div#match-modal #match-description {
+    margin-top: 5rem; }
+  div#match-modal #match-pic {
     max-width: 50%;
-    max-height: 20vh;
-    margin: 1rem auto; }
+    max-height: 45vh;
+    margin: 1rem; }
   div#match-modal #close-modal {
     width: auto;
     margin: 0 auto;
