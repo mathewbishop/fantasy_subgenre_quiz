@@ -19,6 +19,7 @@ router.post("/api/friends", (req, res) => {
     let bestMatch = {
         name: "",
         photo: "",
+        description: "",
         score: 1000
     }
         // First for loop; Here we are looping over the 'database' of existing objects
@@ -37,6 +38,7 @@ router.post("/api/friends", (req, res) => {
             if (totalDiff <= bestMatch.score) {
                 bestMatch.name = database.objects[i].name;
                 bestMatch.photo = database.objects[i].photo;
+                bestMatch.description = database.objects[i].description;
                 bestMatch.score = totalDiff;
             }
 

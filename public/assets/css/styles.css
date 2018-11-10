@@ -35,7 +35,6 @@ div#match-modal {
   div#match-modal #match-description {
     margin-top: 5rem; }
   div#match-modal #match-pic {
-    max-width: 50%;
     max-height: 45vh;
     margin: 1rem; }
   div#match-modal #close-modal {
