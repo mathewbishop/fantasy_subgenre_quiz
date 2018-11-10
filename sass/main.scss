@@ -25,7 +25,7 @@ $font-display: 'MedievalSharp', cursive;
 // Modal styles
 //=====================================================
 div#match-modal {
-    display: none;
+    display: block;
     width: 60%;
     z-index: 1;
     position: fixed;
@@ -34,7 +34,8 @@ div#match-modal {
     max-height: 40vh;
     text-align: center;
     div.modal-content { padding: 2rem; }
-    img#match-pic { max-width: 35%; }
+    img#match-pic { max-width: 50%; margin: 1rem auto; }
+    #close-modal { width: auto; margin: 0 auto; border: none; border-radius: 2px; }
 }
 
 

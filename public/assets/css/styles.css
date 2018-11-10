@@ -18,7 +18,7 @@
     margin-top: 1rem; }
 
 div#match-modal {
-  display: none;
+  display: block;
   width: 60%;
   z-index: 1;
   position: fixed;
@@ -29,7 +29,13 @@ div#match-modal {
   div#match-modal div.modal-content {
     padding: 2rem; }
   div#match-modal img#match-pic {
-    max-width: 35%; }
+    max-width: 50%;
+    margin: 1rem auto; }
+  div#match-modal #close-modal {
+    width: auto;
+    margin: 0 auto;
+    border: none;
+    border-radius: 2px; }
 
 @keyframes home__btn--fade {
   from {
