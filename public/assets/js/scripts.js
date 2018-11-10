@@ -45,7 +45,8 @@ $('#submit-survey').click((event) => {
             $("#match-description").html(description);
             $("#match-modal").show();
         }); 
-        
+        $("#user-name").html(surveyAnswers.name);
+        $("#user-pic").attr("src", surveyAnswers.photo);
     }
     else {
         alert("Please complete form before submitting.");

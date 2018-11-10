@@ -21,7 +21,7 @@
         <div class="form-group col-md-10 col-lg-8">
             <label for="name">First Name: (Required)</label>
             <input class="form-control" id="name" type="text">
-            <label for="pic">Link to a Picture of Yourself</label>
+            <label for="pic">Link to a Picture of Yourself (Required)</label>
             <input class="form-control" type="url" id="pic">
         </div>
         
@@ -142,16 +142,20 @@
 
     <!-- Modal -->
     <div id="match-modal">
-        <div class="modal-content">
+        
+            
+                <p id="user-name">Matt</p>
+                <img id="user-pic" src="https://mathewbishop.com/assets/images/profile-pic.jpg" alt="The picture you entered in the form.">
+            
             <h1>You got...</h1>
             <p id="match-name"></p>
             <div class="row">
-                <img class="col-4" src="" id="match-pic">
+                <img class="col-4" src="https://vignette.wikia.nocookie.net/lotr/images/3/33/Legolas_-_in_Two_Towers.PNG/revision/latest?cb=20120916035151" id="match-pic">
                 <p id="match-description" class="col-6"></p>
             </div>
 
             <button id="close-modal" class="btn">Dismiss</button>
-        </div>
+        
     </div>
       
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
