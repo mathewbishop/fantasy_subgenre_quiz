@@ -35,7 +35,7 @@ $('#submit-survey').click((event) => {
             ]
         }
         // console.log(surveyAnswers);
-        $.post("/api/friends", surveyAnswers)
+        $.post("/api/genres", surveyAnswers)
         .then(res => {
             let matchName = res.bestMatch.name;
             let matchPic = res.bestMatch.photo;

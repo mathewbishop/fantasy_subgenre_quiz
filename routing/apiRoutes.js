@@ -2,15 +2,15 @@
 //=====================================================
 const express = require("express");
 const router = express.Router();
-const database = require("../app/data/friends");
+const database = require("../app/data/genres");
 //=====================================================
 // Routes
 //=====================================================
-router.get("/api/friends", (req, res) => {
+router.get("/api/genres", (req, res) => {
     res.json(database.objects);
 });
 
-router.post("/api/friends", (req, res) => {
+router.post("/api/genres", (req, res) => {
     // Declare vars for the incoming data, and eventual match
     let newSurvey = req.body;
     let userScore = newSurvey.score;
