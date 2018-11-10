@@ -1,0 +1,48 @@
+//=====================================================
+// Variables
+//=====================================================
+$color-white: #FFF9FB;
+$color-accent: #4B3F72;
+$color-black: #252627;
+$color-neutral: #D3D4D9;
+
+$font-display: 'MedievalSharp', cursive;
+//=====================================================
+// Survey Page
+//=====================================================
+.survey {
+    background-color: $color-neutral;
+    .btn { background-color: $color-accent; color: $color-neutral; border: none; border-radius: 2px; }
+    h1.title { margin: 2rem 1rem 2rem 0; display: inline-block; }
+}
+.form-group {
+    margin: 3rem 0; 
+    p { font-size: 1.5rem; }
+    label { font-size: 1.2rem; margin-top: 1rem; }
+}
+
+//=====================================================
+// Modal styles
+//=====================================================
+div#match-modal {
+    display: none;
+    width: 60%;
+    z-index: 1;
+    position: fixed;
+    top: 5%;
+    left: 20%;
+    max-height: 40vh;
+    text-align: center;
+    background-color: white;
+    .modal-content { padding: 2rem; }
+    #match-name { font-size: 1.5rem; font-weight: bold; }
+    #match-description { margin-top: 5rem; }
+    #match-pic { max-height: 45vh; margin: 1rem; }
+    #close-modal { width: auto; margin: 0 auto; border: none; border-radius: 2px; }
+}
+
+
+
+@import "animations",
+        "home"
+;

@@ -35,12 +35,14 @@ $('#submit-survey').click((event) => {
             ]
         }
         // console.log(surveyAnswers);
-        $.post("/api/friends", surveyAnswers)
+        $.post("/api/genres", surveyAnswers)
         .then(res => {
             let matchName = res.bestMatch.name;
             let matchPic = res.bestMatch.photo;
+            let description = res.bestMatch.description;
             $("#match-name").html(matchName);
             $("#match-pic").attr("src", matchPic);
+            $("#match-description").html(description);
             $("#match-modal").show();
         }); 
         
