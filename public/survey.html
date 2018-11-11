@@ -16,12 +16,12 @@
     <h1 class="title">Fantasy Subgenre Quiz</h1><i class="fas fa-hat-wizard fa-3x"></i>
     <hr>
 
-    <form class="my-5">
+    <form id="quiz-form" class="my-5">
 
         <div class="form-group col-md-10 col-lg-8">
             <label for="name">First Name: (Required)</label>
             <input class="form-control" id="name" type="text">
-            <label for="pic">Link to a Picture of Yourself</label>
+            <label for="pic">Link to a Picture of Yourself (Required)</label>
             <input class="form-control" type="url" id="pic">
         </div>
         
@@ -142,7 +142,11 @@
 
     <!-- Modal -->
     <div id="match-modal">
-        <div class="modal-content">
+        
+            
+                <p id="user-name"></p>
+                <img id="user-pic" src="" alt="The picture you entered in the form.">
+            
             <h1>You got...</h1>
             <p id="match-name"></p>
             <div class="row">
@@ -151,7 +155,7 @@
             </div>
 
             <button id="close-modal" class="btn">Dismiss</button>
-        </div>
+        
     </div>
       
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>

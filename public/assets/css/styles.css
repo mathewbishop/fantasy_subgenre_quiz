@@ -24,11 +24,15 @@ div#match-modal {
   position: fixed;
   top: 5%;
   left: 20%;
-  max-height: 40vh;
+  padding: 2rem;
   text-align: center;
-  background-color: white; }
-  div#match-modal .modal-content {
-    padding: 2rem; }
+  background-color: #FFF9FB; }
+  div#match-modal #user-name {
+    font-size: 1.5rem;
+    font-weight: bold; }
+  div#match-modal #user-pic {
+    max-height: 20vh;
+    margin: 0 auto 1rem auto; }
   div#match-modal #match-name {
     font-size: 1.5rem;
     font-weight: bold; }
