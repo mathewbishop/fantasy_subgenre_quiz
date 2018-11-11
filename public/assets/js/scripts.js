@@ -47,6 +47,7 @@ $('#submit-survey').click((event) => {
         }); 
         $("#user-name").html(surveyAnswers.name);
         $("#user-pic").attr("src", surveyAnswers.photo);
+        $("#quiz-form")[0].reset();
     }
     else {
         alert("Please complete form before submitting.");
